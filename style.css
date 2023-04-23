@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFF3F0;
+    font-family: sans-serif;
+}
+/* Nav Bar */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+    background-color: #9046CF;
+    color: #FFFFFF;
+    padding: 25px 60px;
+}
+    /* Cart Icon on Nav Bar */
+.cart {
+    position: relative; /* Have this here to make the 0 in the top right corner */
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 30px;
+}
+.cartAmount {
+    /* Styling to make the 0 in the top right corner + styling of it */
+    position: absolute; 
+    top: -15px; /* To top */
+    right: -10px; /* Shift to right. The px is important or won't work. */
+   /* Cart Amount Styling */
+    font-size: 16px;
+    background-color: #F487B6;
+    color: #ffffff;
+    padding: 3px;
+    border-radius: 3px;
+    
+}
