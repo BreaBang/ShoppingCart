@@ -38,10 +38,10 @@ body{
     padding: 3px;
     border-radius: 3px;
 }
-/* Shop Item Styles */
+/* Shop Item Styles and Media Queries */
 .shop{
     display: grid;
-    grid-template-columns: repeat(4, 250px); /* Creates four repeating colums with width of 223px */
+    grid-template-columns: repeat(4, 250px); /* Creates four repeating colums with width of 250px */
     gap: 30px;
     justify-content: center;
 }
@@ -52,6 +52,7 @@ body{
 }
 .shop-image{
     max-width: 246px;
+    border-radius: 2px;
 }
 .details{
     display: flex;
@@ -71,4 +72,274 @@ body{
     flex-direction: row;
     gap: 8px;
     font-size: 16px;
+}
+ /* Footer */
+ .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+    align-items: center;
+    background-color: #9046CF;
+    color: #FFFFFF;
+    margin-top: 30px;
+    padding: 10px 10px;
+    font-size: 12px;
+}
+.copyright {
+    color: #FFF3F0;
+    text-decoration: none;
+    margin-left: 5px;
+}
+/* Media Queries */
+ /* Viewports between 200px and 280px wide */
+@media only screen and (min-device-width: 200px) and (max-device-width: 280px) {
+    body{
+        max-width: 280px;
+    }
+    /* Shop Cards */
+    .shop{
+        grid-template-columns: repeat(1, 175px); /* Creates two repeating colums with width of 250px */
+    }
+    .shop-image{
+        width: 171px;
+        border-radius: 2px;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 5px;
+        background-color: #FFFFFF;
+    }
+    /* Nav Bar */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+        align-items: center;
+        background-color: #9046CF;
+        color: #FFFFFF;
+        max-width: 280px;
+        margin-bottom: 30px;
+        font-size: .65rem;
+    }
+    h2 {
+        margin-right: 3px;
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    h4{
+        font-size: .9rem;
+    }
+    p {
+        font-size: .75rem;
+    }
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+        align-items: center;
+        background-color: #9046CF;
+        color: #FFFFFF;
+        max-width: 280px;
+        margin-top: 30px;
+        padding: 10px 10px;
+        font-size: .44rem;
+    }
+    .copyright {
+        color: #FFF3F0;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+}
+/* Viewports between 281px and 395px wide */
+@media only screen and (min-device-width: 281px) and (max-device-width: 395px) {
+    body{
+        max-width: 395px;
+    }
+    /* Shop Cards */
+    .shop{
+        grid-template-columns: repeat(1, 250px); /* Creates two repeating colums with width of 250px */
+    }
+    .shop-image{
+        width: 248px;
+        border-radius: 2px;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 5px;
+        background-color: #FFFFFF;
+    }
+    /* Nav Bar */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+        align-items: center;
+        background-color: #9046CF;
+        color: #FFFFFF;
+        max-width: 395px;
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+    }
+    h2 {
+        margin-right: 3px;
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    p {
+        font-size: .9rem;
+    }
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+        align-items: center;
+        background-color: #9046CF;
+        color: #FFFFFF;
+        max-width: 395px;
+        margin-top: 30px;
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+    .copyright {
+        color: #FFF3F0;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+}
+/* Viewports between 396px and 600px wide */
+@media only screen and (min-device-width: 396px) and (max-device-width: 600px) {
+   
+    /* Shop Cards */
+    .shop{
+        grid-template-columns: repeat(1, 250px); /* Creates two repeating colums with width of 250px */
+    }
+    .shop-image{
+        width: 248px;
+        border-radius: 2px;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 5px;
+        background-color: #FFFFFF;
+    }
+    /* Nav Bar */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+        align-items: center;
+        background-color: #9046CF;
+        color: #FFFFFF;
+        max-width: 700px;
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+    }
+    h2 {
+        margin-right: 3px;
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    p {
+        font-size: .9rem;
+    }
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+        align-items: center;
+        background-color: #9046CF;
+        color: #FFFFFF;
+        max-width: 700px;
+        margin-top: 30px;
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+    .copyright {
+        color: #FFF3F0;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+}
+/* Viewports between 601px and 900px wide */
+@media only screen and (min-device-width: 601px) and (max-device-width: 900px) {
+   
+    /* Shop Cards */
+    .shop{
+        grid-template-columns: repeat(2, 250px); /* Creates two repeating colums with width of 250px */
+    }
+    .shop-image{
+        width: 250px;
+        border-radius: 2px;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 5px;
+        background-color: #FFFFFF;
+    }
+    /* Nav Bar */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+        align-items: center;
+        background-color: #9046CF;
+        color: #FFFFFF;
+        max-width: 900px;
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+    }
+    h2 {
+        margin-right: 3px;
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    p {
+        font-size: .9rem;
+    }
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+        align-items: center;
+        background-color: #9046CF;
+        color: #FFFFFF;
+        max-width: 900px;
+        margin-top: 30px;
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+    .copyright {
+        color: #FFF3F0;
+        text-decoration: none;
+        margin-left: 5px;
+    }
 }
