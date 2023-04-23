@@ -16,6 +16,7 @@ body{
     background-color: #9046CF;
     color: #FFFFFF;
     padding: 25px 60px;
+    margin-bottom: 30px;
 }
     /* Cart Icon on Nav Bar */
 .cart {
@@ -36,5 +37,38 @@ body{
     color: #ffffff;
     padding: 3px;
     border-radius: 3px;
-    
+}
+/* Shop Item Styles */
+.shop{
+    display: grid;
+    grid-template-columns: repeat(4, 250px); /* Creates four repeating colums with width of 223px */
+    gap: 30px;
+    justify-content: center;
+}
+.item{
+    border: 2px solid #9046CF;
+    border-radius: 4px;
+    background-color: white;
+}
+.shop-image{
+    max-width: 246px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    background-color: #FFFFFF;
+}
+.price-quantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
 }
