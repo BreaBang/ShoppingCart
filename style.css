@@ -150,8 +150,8 @@ body{
     margin-left: 5px;
 }
 /* Media Queries */
- /* Viewports between 200px and 280px wide */
-@media only screen and (min-device-width: 200px) and (max-device-width: 281px) {
+ /* Viewports between 200px and 376px wide */
+@media only screen and (min-device-width: 200px) and (max-device-width: 376px) {
     body{
         width: 100vw;
     }
@@ -183,7 +183,7 @@ body{
         align-items: center;
         background-color: #9046CF;
         color: #FFFFFF;
-        max-width: 280px;
+        max-width: 100vw;
         margin-bottom: 30px;
         font-size: .65rem;
     }
@@ -202,10 +202,25 @@ body{
     }
     /* About Us */
 .solid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+.solid-hr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     border-top: #9046CF 6px solid;
-    margin: 40px 40px;
+    margin: 30px 0px;
+    width: 175px
+    }
+.our-story{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
     width: 90vw;
-}
+    }
 .about {
     display: flex;
     flex-direction: column;
@@ -213,8 +228,6 @@ body{
     align-items: center;
     width: 90vw;
     margin: 20px 20px;
-    
-   
 }
 .about-container{
     display: flex;
@@ -240,7 +253,7 @@ body{
     margin-top: 30px;
 }
 .media-about-img{
-    width: 70vw;
+    width: 60vw;
 }
     /* Footer */
     .footer {
@@ -250,9 +263,8 @@ body{
         align-items: center;
         background-color: #9046CF;
         color: #FFFFFF;
-        max-width: 280px;
+        max-width: 100vw;
         margin-top: 30px;
-        padding: 10px 10px;
         font-size: .44rem;
     }
     .copyright {
@@ -261,22 +273,23 @@ body{
         margin-left: 5px;
     }
 }
-/* Viewports between 282px and 395px wide */
-@media only screen and (min-device-width: 282px) and (max-device-width: 395px) {
+/* Media Queries */
+ /* Viewports between 377px and 700px wide */
+ @media only screen and (min-device-width: 377px) and (max-device-width: 700px) {
     body{
-        max-width: 100vw;
+        width: 100vw;
     }
     /* Banner */
     .banner-img{
-        max-width: 100vw;
-        margin-bottom: 30px; 
+        width: 100vw;
+        margin-bottom: 10px; 
     }
     /* Shop Cards */
     .shop{
-        grid-template-columns: repeat(1, 250px); /* Creates two repeating colums with width of 250px */
+        grid-template-columns: repeat(2, 165px); /* Creates two repeating colums with width of 250px */
     }
     .shop-image{
-        width: 248px;
+        width: 161px;
         border-radius: 2px;
     }
     .details{
@@ -294,23 +307,78 @@ body{
         align-items: center;
         background-color: #9046CF;
         color: #FFFFFF;
-        max-width: 395px;
+        max-width: 100vw;
         margin-bottom: 30px;
-        font-size: 1.5rem;
+        font-size: .65rem;
     }
     h2 {
         margin-right: 3px;
         font-size: 1.2rem;
     }
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     h4{
         font-size: 1rem;
     }
     p {
-        font-size: .9rem;
+        font-size: 1rem;
     }
+    /* About Us */
+.solid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+.solid-hr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: #9046CF 6px solid;
+    margin: 30px 0px;
+    width: 375px
+    }
+.our-story{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    width: 90vw;
+    }
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 20px 20px;
+}
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+   
+}
+.about-h2{
+    color: #9046CF;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.about-p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 90vw;
+    
+}
+.about-img{
+    margin-top: 30px;
+}
+.media-about-img{
+    width: 60vw;
+}
     /* Footer */
     .footer {
         display: flex;
@@ -319,10 +387,9 @@ body{
         align-items: center;
         background-color: #9046CF;
         color: #FFFFFF;
-        max-width: 395px;
+        max-width: 100vw;
         margin-top: 30px;
-        padding: 10px 10px;
-        font-size: 12px;
+        font-size: .44rem;
     }
     .copyright {
         color: #FFF3F0;
@@ -330,19 +397,23 @@ body{
         margin-left: 5px;
     }
 }
-/* Viewports between 396px and 600px wide */
-@media only screen and (min-device-width: 396px) and (max-device-width: 600px) {
+/* Media Queries */
+ /* Viewports between 701px and 900px wide */
+ @media only screen and (min-device-width: 701px) and (max-device-width: 900px) {
+    body{
+        width: 100vw;
+    }
     /* Banner */
     .banner-img{
-        max-width: 100vw;
-        margin-bottom: 30px; 
+        width: 100vw;
+        margin-bottom: 10px; 
     }
     /* Shop Cards */
     .shop{
-        grid-template-columns: repeat(1, 250px); /* Creates two repeating colums with width of 250px */
+        grid-template-columns: repeat(2, 175px); /* Creates two repeating colums with width of 250px */
     }
     .shop-image{
-        width: 248px;
+        width: 171px;
         border-radius: 2px;
     }
     .details{
@@ -360,23 +431,78 @@ body{
         align-items: center;
         background-color: #9046CF;
         color: #FFFFFF;
-        max-width: 700px;
+        max-width: 100vw;
         margin-bottom: 30px;
-        font-size: 1.5rem;
+        font-size: .65rem;
     }
     h2 {
         margin-right: 3px;
-        font-size: 1.2rem;
-    }
-    h3 {
-        font-size: 1.2rem;
-    }
-    h4{
         font-size: 1rem;
     }
-    p {
-        font-size: .9rem;
+    h3 {
+        font-size: 1.1rem;
     }
+    h4{
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    /* About Us */
+.solid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+.solid-hr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: #9046CF 6px solid;
+    margin: 30px 0px;
+    width: 380px
+    }
+.our-story{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    width: 90vw;
+    }
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 20px 20px;
+}
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+   
+}
+.about-h2{
+    color: #9046CF;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.about-p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 90vw;
+    
+}
+.about-img{
+    margin-top: 30px;
+}
+.media-about-img{
+    width: 60vw;
+}
     /* Footer */
     .footer {
         display: flex;
@@ -385,10 +511,9 @@ body{
         align-items: center;
         background-color: #9046CF;
         color: #FFFFFF;
-        max-width: 700px;
+        max-width: 100vw;
         margin-top: 30px;
-        padding: 10px 10px;
-        font-size: 12px;
+        font-size: .44rem;
     }
     .copyright {
         color: #FFF3F0;
@@ -396,22 +521,23 @@ body{
         margin-left: 5px;
     }
 }
-/* Viewports between 601px and 900px wide */
-@media only screen and (min-device-width: 601px) and (max-device-width: 1200px) {
+/* Media Queries */
+ /* Viewports between 901px and 1300px wide */
+ @media only screen and (min-device-width: 901px) and (max-device-width: 1300px) {
     body{
-        max-width: 100vw;
+        width: 100vw;
     }
     /* Banner */
-   .banner-img{
-    max-width: 100vw;
-    margin-bottom: 30px; 
-}
+    .banner-img{
+        width: 100vw;
+        margin-bottom: 10px; 
+    }
     /* Shop Cards */
     .shop{
-        grid-template-columns: repeat(2, 250px); /* Creates two repeating colums with width of 250px */
+        grid-template-columns: repeat(2, 200px); /* Creates two repeating colums with width of 250px */
     }
     .shop-image{
-        width: 250px;
+        width: 196px;
         border-radius: 2px;
     }
     .details{
@@ -431,23 +557,75 @@ body{
         color: #FFFFFF;
         max-width: 100vw;
         margin-bottom: 30px;
-        font-size: 1.5rem;
+        font-size: .65rem;
     }
-    /* General Styling */
     h2 {
         margin-right: 3px;
-        font-size: 1.2rem;
-    }
-    h3 {
-        font-size: 1.2rem;
-    }
-    h4{
         font-size: 1rem;
     }
-    p {
-        font-size: .9rem;
+    h3 {
+        font-size: 1.1rem;
     }
-
+    h4{
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    /* About Us */
+.solid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+.solid-hr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: #9046CF 6px solid;
+    margin: 30px 0px;
+    width: 380px
+    }
+.our-story{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    width: 90vw;
+    }
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 20px 20px;
+}
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+   
+}
+.about-h2{
+    color: #9046CF;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.about-p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 90vw;
+    
+}
+.about-img{
+    margin-top: 30px;
+}
+.media-about-img{
+   
+}
     /* Footer */
     .footer {
         display: flex;
@@ -458,8 +636,7 @@ body{
         color: #FFFFFF;
         max-width: 100vw;
         margin-top: 30px;
-        padding: 10px 10px;
-        font-size: 12px;
+        font-size: .44rem;
     }
     .copyright {
         color: #FFF3F0;
