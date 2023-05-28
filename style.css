@@ -8,6 +8,10 @@ body{
     background-color: #FFF3F0;
     font-family: sans-serif;
 }
+
+svg{
+    cursor: pointer;
+}
 /* Nav Bar */
 .navbar {
     display: flex;

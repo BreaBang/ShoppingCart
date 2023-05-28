@@ -30,12 +30,13 @@ let shopItemsData = [{
     img: "/images/img.4.jpg"
 }]
 
-let basket = []
+let basket = JSON.parse(localStorage.getItem("cartData")) || [];
 
 let generateShop = () => {
     return (shop.innerHTML = shopItemsData
         .map((x)=>{
             let {id, name, price, desc, img} = x;
+            let search = basket.find((x) => x.id === id) || [];
         return `
         <div class="item" id=product-id-${id}>
         <img src=${img} class="shop-image">
@@ -50,7 +51,7 @@ let generateShop = () => {
                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
                       </svg>
                     <!-- Quantity -->
-                    <div id= ${id} class="quantity">0</div>
+                    <div id= ${id} class="quantity">${search.item === undefined? 0 : search.item}</div>
                     <!-- Plus -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16" onclick="increase(${id})">
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -77,23 +78,23 @@ let increase = (id)=>{
     } else{
         search.item += 1;
     }
-
-   
-
     console.log(basket)
     update(selectedItem.id)
+     // Setting item in the local storage.
+   localStorage.setItem("cartData", JSON.stringify(basket));
 }
 let decrease = (id)=>{
     let selectedItem = id;
     let search = basket.find((x)=> x.id === selectedItem.id);
-
-    if(search.item === 0) return;
+    if(search === undefined) {return}
+     else if(search.item === 0) {return}
      else{
         search.item -= 1;
     }
-
-    console.log(basket)
     update(selectedItem.id)
+    basket = basket.filter((x)=>x.item !== 0 );
+    console.log(basket)
+    localStorage.setItem("cartData", JSON.stringify(basket));
 }
 let update = (id) => {
     let search = basket.find((x) => x.id === id );
@@ -106,3 +107,4 @@ let calculation = () => {
     cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y)=> x+y, 0);
     
 };
+calculation();
