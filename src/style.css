@@ -22,6 +22,7 @@ svg{
     display: flex;
     flex-direction: row;
     justify-content: space-between; /* Makes Nav Bar title and cart at opposite ends of nav bar div. */
+    align-items: center;
     background-color: #9046CF;
     color: #FFFFFF;
     padding: 25px 60px;

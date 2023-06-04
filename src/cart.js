@@ -100,13 +100,15 @@ let update = (id) => {
 let removeItem = (id) => {
     let selectedItem = id
     basket = basket.filter((x) => x.id !== selectedItem.id);
-    localStorage.setItem("cartData", JSON.stringify(basket));
     generateCartItems();
     totalAmount();
+    calculation();
+    localStorage.setItem("cartData", JSON.stringify(basket));
 }
 let clearCart = () => {
     basket = []
     generateCartItems();
+    calculation();
     localStorage.setItem("cartData", JSON.stringify(basket));
 }
 
