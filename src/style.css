@@ -88,11 +88,29 @@ svg{
     justify-content: space-between;
     align-items: center;
 }
+/* Label and Buttons */
+.text-center{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.HomeBTN{
+    background-color: #9046CF;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 .buttons{
     display: flex;
     flex-direction: row;
     gap: 8px;
     font-size: 16px;
+}
+.bi-x-lg{
+    color: red;
+    font-weight: bold;
 }
 /* About Us */
 .solid{
@@ -139,6 +157,27 @@ svg{
 .about-img{
     margin-top: 30px;
 }
+/* Shopping Cart on Cart Page */
+.shopping-cart{
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 15px;
+}
+.cart-item{
+    display: flex;
+    border: #9046CF 2px solid;
+    border-radius: 6px;
+    
+}
+.title-price-x{
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
  /* Footer */
  .footer {
     display: flex;
