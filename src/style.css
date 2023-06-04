@@ -176,7 +176,17 @@ svg{
     align-items: center;
     justify-content: space-between;
 }
-
+.title-price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cart-item-price{
+    background-color: lavender;
+    color: rgb(35, 1, 35);
+    border: 6px;
+    padding:3px 6px;
+}
 
  /* Footer */
  .footer {

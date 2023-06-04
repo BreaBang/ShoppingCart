@@ -19,15 +19,28 @@ let generateCartItems = () => {
             <img width = "100" src=${search.img} alt="" />
             <div class="details">
             <div class="title-price-x">
-                <h4 class="title">
+                <h4 class="title-price">
                 <p>${search.name}</p>
-                <p>${search.price}</p>
+                <p class="cart-item-price">${search.price}</p>
                 </h4>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
 </svg>
             </div>
-            <div class="cart-buttons"></div>
+            <div class="cart-buttons">
+                <div class="buttons">
+                    <!-- Minus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16" onclick="decrease(${id})" >
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                      </svg>
+                    <!-- Quantity -->
+                    <div id= ${id} class="quantity">${item}</div>
+                    <!-- Plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16" onclick="increase(${id})">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                      </svg>
+                </div>
+            </div>
             <h3></h3>
             </div>
             </div>`;
@@ -45,3 +58,40 @@ let generateCartItems = () => {
 }
 
 generateCartItems()
+
+let increase = (id)=>{
+    let selectedItem = id;
+    let search = basket.find((x)=> x.id === selectedItem.id);
+
+    if(search===undefined){
+        basket.push({
+            id: selectedItem.id,
+            item: 1,
+        })
+    } else{
+        search.item += 1;
+    }
+    console.log(basket)
+    update(selectedItem.id)
+     // Setting item in the local storage.
+   localStorage.setItem("cartData", JSON.stringify(basket));
+}
+let decrease = (id)=>{
+    let selectedItem = id;
+    let search = basket.find((x)=> x.id === selectedItem.id);
+    if(search === undefined) {return}
+     else if(search.item === 0) {return}
+     else{
+        search.item -= 1;
+    }
+    update(selectedItem.id)
+    basket = basket.filter((x)=>x.item !== 0 );
+    generateCartItems();
+    console.log(basket)
+    localStorage.setItem("cartData", JSON.stringify(basket));
+}
+let update = (id) => {
+    let search = basket.find((x) => x.id === id );
+    document.getElementById(id).innerHTML = search.item
+    calculation()
+};
