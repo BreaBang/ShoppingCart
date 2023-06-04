@@ -1,3 +1,5 @@
+<img src="img/yogawithyou.gif" />
+
 # ShoppingCart
 This is a simple vanilla JavaScript e-commerce website, with only two pages. The site allows users to add items to a cart, update item amounts (increase and decrease), and clear their cart by removing all items.
 
