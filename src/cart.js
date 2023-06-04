@@ -23,7 +23,7 @@ let generateCartItems = () => {
                 <p>${search.name}</p>
                 <p class="cart-item-price">${search.price}</p>
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" onclick="removeItem(${id})">
 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
 </svg>
             </div>
@@ -41,9 +41,10 @@ let generateCartItems = () => {
                       </svg>
                 </div>
             </div>
-            <h3></h3>
+            <h3>$ ${item * search.price}</h3>
             </div>
-            </div>`;
+            </div>`
+           
         })
         .join(""));
     } else {
@@ -71,7 +72,7 @@ let increase = (id)=>{
     } else{
         search.item += 1;
     }
-    console.log(basket)
+    generateCartItems();
     update(selectedItem.id)
      // Setting item in the local storage.
    localStorage.setItem("cartData", JSON.stringify(basket));
@@ -93,5 +94,40 @@ let decrease = (id)=>{
 let update = (id) => {
     let search = basket.find((x) => x.id === id );
     document.getElementById(id).innerHTML = search.item
-    calculation()
+    calculation();
+    totalAmount();
 };
+let removeItem = (id) => {
+    let selectedItem = id
+    basket = basket.filter((x) => x.id !== selectedItem.id);
+    localStorage.setItem("cartData", JSON.stringify(basket));
+    generateCartItems();
+    totalAmount();
+}
+let clearCart = () => {
+    basket = []
+    generateCartItems();
+    localStorage.setItem("cartData", JSON.stringify(basket));
+}
+
+let totalAmount = () => {
+    if(basket.length !== 0){
+        let amount = basket
+        .map((x)=>{
+            let {item, id} = x;
+            let search = shopItemsData.find((y) => y.id === id) || [];
+            return item * search.price;
+        })
+        .reduce((x,y) => x + y, 0);
+
+        label.innerHTML = `
+        <h2>Total: $ ${amount}</h2>
+        <button class="checkout">Checkout</button>
+        <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+        `;
+        
+    } else {
+        return
+    }
+};
+totalAmount();

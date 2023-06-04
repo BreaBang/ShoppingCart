@@ -112,6 +112,26 @@ svg{
     color: red;
     font-weight: bold;
 }
+.removeAll{
+    background-color: rgb(223, 223, 20);
+    color: #9046CF;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.checkout{
+    background-color: #9046CF;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 /* About Us */
 .solid{
     display: flex;
@@ -160,7 +180,7 @@ svg{
 /* Shopping Cart on Cart Page */
 .shopping-cart{
     display: grid;
-    grid-template-columns: repeat(1, 320px);
+    grid-template-columns: repeat(1, 360px);
     justify-content: center;
     gap: 15px;
 }
@@ -171,7 +191,7 @@ svg{
     
 }
 .title-price-x{
-    width: 195px;
+    width: 230px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -184,8 +204,8 @@ svg{
 .cart-item-price{
     background-color: lavender;
     color: rgb(35, 1, 35);
-    border: 6px;
-    padding:3px 6px;
+    border-radius: 6px;
+    padding:3px 12px;
 }
 
  /* Footer */
