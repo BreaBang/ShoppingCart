@@ -309,6 +309,7 @@ svg{
     align-items: center;
     width: 90vw;
     margin: 20px 20px;
+    margin-bottom: 50px;
 }
 .about-container{
     display: flex;
