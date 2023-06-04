@@ -24,7 +24,7 @@ let shopItemsData = [{
 }, 
 {
     id:"O4",
-    name: "Grouth Hatha Class",
+    name: "Group Hatha Class",
     price: "$15",
     desc: "Find balance and restoration. Online group class. 45-minutes.",
     img: "/images/img.4.jpg"

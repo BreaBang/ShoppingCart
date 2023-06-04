@@ -5,8 +5,13 @@
 }
 
 body{
-    background-color: #FFF3F0;
+    background-color: #FFFFFF;
     font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
 
 svg{
@@ -375,7 +380,10 @@ svg{
     justify-content: center;
     margin-bottom: 30px;
     width: 90vw;
-    
+}
+li {
+    text-indent: 12px;
+    list-style: none;
 }
 .about-img{
     margin-top: 30px;
